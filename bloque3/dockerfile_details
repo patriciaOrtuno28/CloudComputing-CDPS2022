@@ -1,0 +1,13 @@
+FROM ruby:2.7.1-slim
+
+EXPOSE 9080
+
+COPY practica_creativa2/bookinfo/src/details/details.rb /opt/microservices/
+
+ARG service_version
+ENV SERVICE_VERSION ${service_version:-v1}
+ARG enable_external_book_service
+ENV ENABLE_EXTERNAL_BOOK_SERVICE ${enable_external_book_service:-true}
+
+CMD ruby /opt/microservices/details.rb 9080
+  

@@ -1,0 +1,32 @@
+##################################################################################################
+# Details deployment
+##################################################################################################
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: details
+  labels:
+    app: details
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: details
+  template:
+    metadata:
+      labels:
+        app: details
+    spec:
+      containers:
+        - env:
+            - name: ENABLE_EXTERNAL_BOOK_SERVICE
+              value: "true"
+            - name: SERVICE_VERSION
+              value: v3
+          image: patriciaortuno28/practica-creativa2:28details
+          name: 28-details
+          ports:
+            - containerPort: 9080
+          resources: {}
+      restartPolicy: Always
+
