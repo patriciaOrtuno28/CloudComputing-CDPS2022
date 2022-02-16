@@ -8,14 +8,26 @@ Clonar este proyecto, preferiblemente por directorios, dentro de una máquina vi
 ## Bloque 1
 Despliegue de la aplicación en máquina virtual pesada.
 Uso de la tecnología Flask para la comunicación Python-HTML de las variables de entorno.
+# Ejecución
+cd bloque1
+python3 bloque1.py
 
 ## Bloque 2
 Despliegue de la aplicación monolítica usando Docker.
+# Ejecución
+cd bloque2
+python3 bloque2.py
 
 ## Bloque 3
 Segmentación de la aplicación monolítica en microservicios usando Docker-compose.
+# Ejecución
+cd bloque3
+python3 bloque3.py
 
 ## Bloque 4
 Segmentación de la aplicación monolítica en microservicios usando Kubernetes.
 Administrado con GKE (Google Kubernetes Engine) en modo Balanceador de carga.
 Imágenes almacenadas en DockerHub.
+# Ejecución
+cd bloque4
+python3 bloque4.py
